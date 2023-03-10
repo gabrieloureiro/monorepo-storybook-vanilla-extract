@@ -1,6 +1,6 @@
 # monorepo-storybook-vanilla-extract
 
-To run execute *WITH NPM* instead yarn
+To run execute **with npm** instead yarn
 
 ```
 npm i
