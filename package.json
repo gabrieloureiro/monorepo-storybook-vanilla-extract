@@ -1,0 +1,17 @@
+{
+  "name": "lourero-ui",
+  "author": "Gabriel Loureiro <gabrieloureirof@gmail.com>",
+  "license": "ISC",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.26.0",
+    "turbo": "^1.8.3"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "@loureiro/web",
+  "version": "0.0.1",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "license": "ISC",
+  "scripts": {
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
+    "build": "tsup src/index.ts --format esm,cjs --dts --minify",
+    "lint": "eslint src/**/*.ts* --fix"
+  },
+  "dependencies": {
+    "@vanilla-extract/css": "^1.10.0",
+    "@vanilla-extract/recipes": "^0.3.0",
+    "@vanilla-extract/sprinkles": "^1.5.1",
+    "clsx": "^1.2.1",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@loureiro/eslint-config": "*",
+    "@loureiro/ts-config": "*",
+    "@types/lodash": "^4.14.191",
+    "tsup": "^6.6.3",
+    "typescript": "4.9.5"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "@loureiro/react",
+  "version": "0.0.1",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "license": "ISC",
+  "scripts": {
+    "dev": "tsup src/index.ts --format esm,cjs --dts --external react --watch",
+    "build": "tsup src/index.ts --format esm,cjs --dts --external react --minify",
+    "lint": "eslint src/**/*.ts* --fix"
+  },
+  "devDependencies": {
+    "@loureiro/eslint-config": "*",
+    "@loureiro/ts-config": "*",
+    "@loureiro/web": "*",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "react": "^18.2.0",
+    "tsup": "^6.6.3",
+    "typescript": "4.9.5"
+  },
+  "dependencies": {
+    "@radix-ui/react-avatar": "^1.0.2",
+    "@radix-ui/react-checkbox": "^1.0.3",
+    "phosphor-react": "^1.4.1"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "extends": "@loureiro/eslint-config",
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "rules": {
+        "no-undef": "off"
+      }
+    }
+  ]
+}
