@@ -16,10 +16,11 @@ const allowedHtmlTags = [
   'em',
 ] as const
 
-type AllowedHTMLTags = typeof allowedHtmlTags[number]
+type AllowedHTMLTags = (typeof allowedHtmlTags)[number]
 
 export type TextProps = HTMLAttributes<HTMLElement> &
-  Atoms & TextVariantSize & {
+  Atoms &
+  TextVariantSize & {
     as?: AllowedHTMLTags
   }
 

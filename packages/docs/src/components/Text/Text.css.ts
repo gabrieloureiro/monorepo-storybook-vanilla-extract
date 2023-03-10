@@ -1,4 +1,4 @@
-import { recipe, sprinkles, RecipeVariants } from '@loureiro/web'
+import { recipe, RecipeVariants, sprinkles } from '@loureiro/web'
 
 export const textStyles = recipe({
   base: sprinkles({
