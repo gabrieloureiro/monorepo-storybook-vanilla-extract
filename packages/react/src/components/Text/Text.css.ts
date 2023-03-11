@@ -5,7 +5,7 @@ export const textStyles = recipe({
     fontFamily: 'default',
     fontWeight: 'regular',
     lineHeight: 'normal',
-    color: 'black',
+    color: 'error-100',
     m: '0',
   }),
 
@@ -23,6 +23,7 @@ export const textStyles = recipe({
       '6xl': sprinkles({ fontSize: '6xl' }),
       '7xl': sprinkles({ fontSize: '7xl' }),
       '8xl': sprinkles({ fontSize: '8xl' }),
+      '9xl': sprinkles({ fontSize: '9xl' }),
       giant: sprinkles({ fontSize: 'giant' }),
     },
   },
