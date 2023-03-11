@@ -5,7 +5,6 @@ export default {
   title: 'Typography/Text',
   component: TextReactComponent,
   argTypes: {
-    css: { table: { disable: true } },
     children: { control: { type: 'text' } },
     as: {
       options: ['p', 'span', 'strong', 'em'],
