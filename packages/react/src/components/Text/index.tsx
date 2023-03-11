@@ -3,18 +3,7 @@ import { HTMLAttributes } from 'react'
 
 import { textStyles, TextVariantSize } from './Text.css'
 
-const allowedHtmlTags = [
-  'h1',
-  'h2',
-  'h3',
-  'h4',
-  'h5',
-  'h6',
-  'p',
-  'span',
-  'strong',
-  'em',
-] as const
+const allowedHtmlTags = ['p', 'span', 'strong', 'em'] as const
 
 type AllowedHTMLTags = (typeof allowedHtmlTags)[number]
 
@@ -38,12 +27,12 @@ export const Text = ({
   ): htmlTag is AllowedHTMLTags => Component.includes(htmlTag)
 
   const className = clsx(
+    variantClass,
     propsToForward.className,
     atoms({
       reset: isAllowedHtmlTag(Component) ? Component : 'span',
       ...atomsProps,
     }),
-    variantClass,
   )
 
   return (

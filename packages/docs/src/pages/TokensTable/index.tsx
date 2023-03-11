@@ -1,3 +1,5 @@
+import './styles.css'
+
 type TokensTableProps = {
   tokens: Record<string, string>
   hasRemValue?: boolean

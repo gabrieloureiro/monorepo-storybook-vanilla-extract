@@ -8,7 +8,7 @@ export default {
     css: { table: { disable: true } },
     children: { control: { type: 'text' } },
     as: {
-      options: ['p', 'strong', 'span'],
+      options: ['p', 'span', 'strong', 'em'],
       control: { type: 'inline-radio' },
     },
     size: {
@@ -36,7 +36,6 @@ export default {
   args: {
     children: 'Text',
     as: 'span',
-    dark: true,
     size: 'md',
   },
 } as Meta
@@ -47,6 +46,7 @@ export const CustomTag: StoryObj = {
   args: {
     children: 'Text strong',
     as: 'strong',
+    size: '9xl',
   },
   parameters: {
     docs: {
