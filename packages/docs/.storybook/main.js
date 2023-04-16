@@ -1,4 +1,5 @@
 const { mergeConfig } = require('vite')
+const path = require('path')
 
 module.exports = {
   "stories": [
@@ -24,7 +25,21 @@ module.exports = {
     }
 
     return mergeConfig(config, {
-      plugins: [require("@vanilla-extract/vite-plugin").vanillaExtractPlugin()]
+      ...config,
+      plugins: [require("@vanilla-extract/vite-plugin").vanillaExtractPlugin()],
+      resolve: {
+        alias: [
+          {
+            find: '@loureiro/react',
+            replacement: path.resolve(__dirname, '../../react'),
+          },
+          {
+            find: '@loureiro/web',
+            replacement: path.resolve(__dirname, '../../web'),
+          },
+        ],
+
+      },
     });
   }
 }

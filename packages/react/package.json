@@ -7,16 +7,36 @@
   "files": [
     "dist"
   ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "main": "./dist/index.mjs",
+      "module": "./dist/index.mjs",
+      "import": "./dist/index.mjs"
+    },
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "require": "./dist/*.js",
+      "main": "./dist/*.js",
+      "module": "./dist/*.mjs",
+      "import": "./dist/*.mjs"
+    },
+    "./dist/index.css": {
+      "import": "./dist/index.css",
+      "require": "./dist/index.css"
+    }
+  },
   "license": "ISC",
   "scripts": {
     "dev": "tsup src/index.ts --format esm,cjs --dts --external react --watch",
     "build": "tsup src/index.ts --format esm,cjs --dts --external react --minify",
-    "lint": "eslint src/**/*.ts* --fix"
+    "lint": "TIMING=1 eslint src/**/*.ts* --fix",
+    "clean": "rm -rf node_modules && rm -rf dist"
   },
   "devDependencies": {
     "@loureiro/eslint-config": "*",
     "@loureiro/ts-config": "*",
-    "@loureiro/web": "*",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "react": "^18.2.0",
@@ -27,6 +47,7 @@
   "dependencies": {
     "@radix-ui/react-avatar": "^1.0.2",
     "@radix-ui/react-checkbox": "^1.0.3",
-    "phosphor-react": "^1.4.1"
+    "phosphor-react": "^1.4.1",
+    "@loureiro/web": "*"
   }
 }
