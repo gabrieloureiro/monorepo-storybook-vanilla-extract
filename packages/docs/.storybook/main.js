@@ -34,11 +34,14 @@ module.exports = {
             replacement: path.resolve(__dirname, '../../react'),
           },
           {
+            find: '@loureiro/css',
+            replacement: path.resolve(__dirname, '../../web/dist/index.css'),
+          },
+          {
             find: '@loureiro/web',
             replacement: path.resolve(__dirname, '../../web'),
           },
         ],
-
       },
     });
   }

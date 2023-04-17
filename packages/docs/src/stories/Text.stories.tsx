@@ -1,5 +1,9 @@
+import '@loureiro/css'
+
 import { Text as TextReactComponent } from '@loureiro/react'
 import { Meta, StoryObj } from '@storybook/react'
+
+const allowedHtmlTags = ['p', 'span', 'strong', 'em']
 
 export default {
   title: 'Typography/Text',
@@ -7,7 +11,7 @@ export default {
   argTypes: {
     children: { control: { type: 'text' } },
     as: {
-      options: ['p', 'span', 'strong', 'em'],
+      options: allowedHtmlTags,
       control: { type: 'inline-radio' },
     },
     size: {
@@ -50,8 +54,7 @@ export const CustomTag: StoryObj = {
   parameters: {
     docs: {
       description: {
-        story:
-          'By default the component is a <strong>span</strong> tag, but you can change it to <strong>p</strong> and <strong>strong</strong>',
+        story: `By default the component is a <strong>span</strong> tag, but you can change it to <strong>${allowedHtmlTags}</strong> tags.`,
       },
     },
   },
